@@ -38,3 +38,20 @@ app.get("/api/waitlist",function(req,res){
 app.listen(port, function(){
     console.log("app listening " + port);
 })
+
+app.post("/api/reservations", function(req,res){
+  var newReservation = req.body;
+
+  if (reservations.length < 5){
+    reservations.push(newReservation)
+    alert("Your Reservation Has Been Placed!")
+  }
+  else {
+    waitlist.push(newReservation);
+    alert("You have been place on the waitlist")
+  };
+    res.json(newReservation);
+  });
+
+
+
