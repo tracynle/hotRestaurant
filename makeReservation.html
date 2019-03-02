@@ -51,27 +51,43 @@
                                 <input type="text" class="form-control" id="reserve-uniqueId" placeholder="">
                             </div>
                             
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary" id="add-btn">Submit</button>
                         </form>
                     </div>
                 </div>  
              </div>
         </div>
-       
     </div>
 
         
     <footer id="main-footer">
-            <div class="container">
-                <p>
-                    <a href="/api/reservations">API Table Link</a>
-                    |
-                    <a href="/api/waitlist">API Wait List</a>
-                </p>
-            </div>
-        </footer>
+        <div class="container">
+            <p>
+                <a href="/api/reservations">API Table Link</a>
+                |
+                <a href="/api/waitlist">API Wait List</a>
+            </p>
+        </div>
+    </footer>
         
     <script type="text/javascript">
+       $("#add-btn").on("click", function(event) {
+      event.preventDefault();
+
+      var newReservation = {
+        name: $("#reserve-name").val().trim(),
+        phone: $("#reserve-phone").val().trim(),
+        email: $("#reserve-email").val().trim(),
+        uniqueId: $("#reserve-uniqueId").val().trim()
+      };
+
+      $.post("/api/reservations", newReservation)
+        .then(function(data) {
+          console.log(data);
+          alert("Adding reservation");
+        });
+
+    });
     </script>
 
     </body>
