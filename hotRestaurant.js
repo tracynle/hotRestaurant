@@ -18,11 +18,11 @@ app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "index.html"));
   });
   
-app.get("/makeReservation.html", function(req, res) {
+app.get("/makeReservation", function(req, res) {
     res.sendFile(path.join(__dirname, "makeReservation.html"));
   });
 
-app.get("/viewTables.html", function(req, res) {
+app.get("/viewTables", function(req, res) {
     res.sendFile(path.join(__dirname, "viewTables.html"));
   });  
 
