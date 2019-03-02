@@ -33,7 +33,3 @@ app.get("/api/reservations",function(req,res){
 app.get("/api/waitlist",function(req,res){
     res.json(waitlist);
 })
-
-app.listen(port, function(){
-    console.log("app listening " + port);
-})
