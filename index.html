@@ -1,4 +1,4 @@
-<!-- UI Front end
+<!-- /* UI Front end
     Make 3 tables
     1. Home page
     2. View Tables: Appends list of table reservations submitted
@@ -6,32 +6,49 @@
             - Current Reservations:
             - Waiting List: 
     3. Make reservation: contains form 
+*/ -->
 
--->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hot Restaurant</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css/" />
+  <meta charset="UTF-8">
+  <title>Hot Restaurant</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!--Stylesheet-->
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+
+
+
 </head>
+
 <body>
-    <div class="container">
-        <div class="jumbotron">
-            <h1 class="display-4">Hot Restaurant</h1>
-            <p class="lead"></p>
-            <hr class="my-4">
-            <h2 class="text-center"></h2>
-            <a class="btn btn-primary btn-lg" href="#" role="button">View Tabes</a>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Make Reservations</a>
 
-        </div>
-
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Hot Restaurant</h1>
+      <hr>
+      <h3>Book your seat before they are all gone!</h3>
+      <br/>
+      <a href="/add"><button class="btn btn-primary btn-lg"><span class="fa fa-table"></span> View Tables</button></a>
+      <a href="/add"><button class="btn btn-danger btn-lg"><span class="fa fa-credit"></span> Make Reservation</button></a>
     </div>
-    
-    
+  <div class="row">
+
+    <div class="">
+      <a href="/tables.html">API Table Link</a>
+      |
+      <a href="/waitList.html">API Wait List</a>
+    </div>
+
+
+  <script type="text/javascript">
+  </script>
 </body>
+
 </html>
