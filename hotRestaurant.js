@@ -14,7 +14,7 @@ var waitlist = [{
 
 }];
 
-app.get("/index", function(req, res) {
+app.get("index", function(req, res) {
     res.sendFile(path.join(__dirname, "index.html"));
   });
   
@@ -44,11 +44,9 @@ app.post("/api/reservations", function(req,res){
 
   if (reservations.length < 5){
     reservations.push(newReservation)
-    alert("Your Reservation Has Been Placed!")
   }
   else {
     waitlist.push(newReservation);
-    alert("You have been place on the waitlist")
   };
     res.json(newReservation);
   });
